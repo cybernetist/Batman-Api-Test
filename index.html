@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batman Discount</title>  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="assets/css/tailwind.23"></script>
+    <script>
+        tailwind.config = {
+          darkMode: 'class',  
+          theme: {
+            screens: {
+                    sm: '480px',
+                    md: '1024px',
+                    lg: '1366px',
+                    xl: '1440px',
+                    },
+            extend: {
+       
+              colors:{
+                  oldPrice:"#F8593B",
+                  orderBtn: "#2ECC71",
+                  discount:"#007AE9",
+                  dark: "#272D3F",
+              },
+              fontFamily: {
+                    sans: ['DM Serif Display', 'sans-serif'],
+                    serif: ['Open Sans', 'serif'],
+              },
+            }
+          }
+        }
+      </script>
+     <style type="text/tailwindcss">
+        input:checked ~ .dot {
+            transform: translateX(100%);
+            background-color: #48bb78;
+        }
+      </style>
+</head>
+<body class="dark:bg-zinc-900 bg-slate-200">
+
+    
+        <div class="container mx-auto mt-5 px-4 py-4 ">
+
+            <label 
+            for="toogleA"
+            class="flex items-center cursor-pointer my-5 font-serif"
+          >
+            <div class="relative">
+              <input id="toogleA" type="checkbox" class="sr-only" />
+              <div class="w-10 h-4 bg-gray-400 rounded-full shadow-inner"></div>
+              <div class="dot absolute w-6 h-6 bg-white rounded-full shadow -left-1 -top-1 transition"></div>
+            </div>
+            <div class="ml-3 dark:text-white font-medium">
+              Dark Mode
+            </div>
+          </label>
+    
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4" id="gameContent">
+              
+                
+            </div>
+        </div>
+   
+  
+</div>
+
+
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
